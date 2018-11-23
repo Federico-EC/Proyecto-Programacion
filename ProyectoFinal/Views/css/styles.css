@@ -1,0 +1,92 @@
+nav{
+	position:relative;
+	margin:auto;
+	width:100%;
+	height:auto;
+	background:#EF5350;
+}
+
+nav ul{
+	position:relative;
+	margin:auto;
+	width:50%;
+	text-align: center;
+}
+
+nav ul li{
+	display:inline-block;
+	width:24%;
+	line-height: 50px;
+	list-style: none;
+}
+
+nav ul li a{
+	color:white;
+	text-decoration: none;
+}
+
+
+section{
+	position: relative;
+	margin: auto;
+	width:400px;
+}
+
+section h1{
+	position: relative;
+	margin: auto;
+	padding:10px;
+	text-align: center;
+}
+
+section form{
+	position:relative;
+	margin:auto;
+	width:400px;
+}
+
+section form input{
+	display:inline-block;
+	padding:10px;
+	width:95%;
+	margin:5px;
+}
+
+section form input[type="submit"]{
+	position:relative;
+	margin:20px auto;
+	left:4.5%;
+
+}
+
+table{
+	text-align: center;
+	position:relative;
+	margin:auto;
+	width:100%;
+	left:-20%;
+}
+
+table thead tr th{
+	padding:10px;
+}
+
+table tbody tr td{
+	padding:5px;
+}
+
+
+
+header {
+	margin: 0 0 0 0;
+	padding: 0;
+	width: 50%; 
+	background: #FF0000;
+	color: white;
+}
+
+
+img {
+	max-width: 100%;
+}
+

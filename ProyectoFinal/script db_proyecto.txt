@@ -1,0 +1,42 @@
+DROP DATABASE IF EXISTS db_proyecto;
+
+CREATE DATABASE db_proyecto DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci;
+
+use db_proyecto;
+
+DROP TABLE IF EXISTS dependencia;
+CREATE TABLE dependencia (
+codigo INT NOT NULL AUTO_INCREMENT, 
+nombre VARCHAR(15) NOT NULL ,
+sigla VARCHAR(10) NOT NULL,
+tipo_depen int NOT NULL ,
+activo boolean NOT NULL ,
+id_depen_perten int,
+constraint depen_asoc foreign key (id_depen_perten) references dependencia (codigo),
+PRIMARY KEY (codigo)
+);
+
+DROP TABLE IF EXISTS proceso;
+CREATE TABLE proceso (
+id_proceso INT NOT NULL AUTO_INCREMENT, 
+nom_proceso VARCHAR(15) NOT NULL ,
+tipo_proceso  int NOT NULL,
+f_autoeval date,
+f_prox_autoeval date,
+id_depen  int NOT NULL,
+constraint depen_proceso foreign key (id_depen) references dependencia (codigo),
+PRIMARY KEY (id_proceso)
+);
+
+
+DROP TABLE IF EXISTS acta;
+CREATE TABLE acta (
+num_acta INT NOT NULL unique, 
+vigencia  int(15) NOT NULL,
+tipo_proceso int NOT NULL,
+f_resolucion date NOT NULL,
+id_proceso int NOT NULL unique,
+constraint acta_proceso foreign key (id_proceso) references proceso (id_proceso),
+PRIMARY KEY (num_acta)
+);
+
